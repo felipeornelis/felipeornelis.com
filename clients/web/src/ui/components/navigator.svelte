@@ -4,11 +4,11 @@
 
 <header class="w-full h-16 fixed top-o border-b-[1px] px-5 bg-transparent backdrop-blur-[7px]">
 	<div class="mx-auto h-full max-w-screen-xl text-white flex items-center justify-between">
-		<a href="/" target="self">Felipe Ornelis</a>
+		<a href="/" target="self">FelipeOrnelis.com</a>
 
 		<nav class="hidden md:flex gap-11">
 			{#each links as { label, href } (label)}
-				<a {href} class="text-white text-sm hover:underline">{label}</a>
+				<a {href} class="opacity-70 text-sm hover:opacity-100">{label}</a>
 			{/each}
 		</nav>
 	</div>

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-	@apply bg-black font-sans;
+	@apply bg-black text-white font-sans;
 }
 
 .text-gradient-blue {

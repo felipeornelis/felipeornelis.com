@@ -24,6 +24,9 @@
 		<a
 			class="flex items-center justify-center py-2 px-5 rounded-[3rem] bg-blue-600 text-white gap-2"
 			href="https://linkedin.com/in/felipeornelis"
+			referrerpolicy="no-referrer"
+			rel="external, noreferrer"
+			target="_blank"
 		>
 			<Linkedin size={32} color="#ffffff" />
 			Let's talk
