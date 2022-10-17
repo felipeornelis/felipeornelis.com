@@ -9,7 +9,6 @@ specifiers:
   eslint: ^8.16.0
   eslint-config-prettier: ^8.3.0
   eslint-plugin-svelte3: ^4.0.0
-  phosphor-svelte: ^1.2.1
   postcss: ^8.4.18
   prettier: ^2.6.2
   prettier-plugin-svelte: ^2.7.0
@@ -30,7 +29,6 @@ devDependencies:
   eslint: 8.25.0
   eslint-config-prettier: 8.5.0_eslint@8.25.0
   eslint-plugin-svelte3: 4.0.0_2h6d4ngklmojchucosx7yvuw7m
-  phosphor-svelte: 1.2.1_svelte@3.52.0
   postcss: 8.4.18
   prettier: 2.7.1
   prettier-plugin-svelte: 2.8.0_lrllcp5xtrkmmdzifit4hd52ze
@@ -1686,14 +1684,6 @@ packages:
   /path-type/4.0.0:
     resolution: {integrity: sha512-gDKb8aZMDeD/tZWs9P6+q0J9Mwkdl6xMV8TjnGP3qJVJ06bdMgkbBlLU8IdfOsIsFz2BW1rNVT3XuNEl8zPAvw==}
     engines: {node: '>=8'}
-    dev: true
-
-  /phosphor-svelte/1.2.1_svelte@3.52.0:
-    resolution: {integrity: sha512-mJDTRr4kBTRYA+SqEAj7rSZ9jbtRWrkqKjn+uYG8Ivhe17LnD685ZehRbQPNdkN8v+T4rjnfnysyKhqn3WXeTw==}
-    peerDependencies:
-      svelte: '>=3'
-    dependencies:
-      svelte: 3.52.0
     dev: true
 
   /picocolors/1.0.0:

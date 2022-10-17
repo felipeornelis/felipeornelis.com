@@ -6,9 +6,9 @@
 	<div class="mx-auto h-full max-w-screen-xl text-white flex items-center justify-between">
 		<a href="/" target="self">Felipe Ornelis</a>
 
-		<nav class="flex gap-11">
+		<nav class="hidden md:flex gap-11">
 			{#each links as { label, href } (label)}
-				<a {href} class="text-white hover:underline">{label}</a>
+				<a {href} class="text-white text-sm hover:underline">{label}</a>
 			{/each}
 		</nav>
 	</div>

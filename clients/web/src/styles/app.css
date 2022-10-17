@@ -6,6 +6,10 @@ body {
 	@apply bg-black font-sans;
 }
 
+.text-gradient-blue {
+	background-image: linear-gradient(rgb(94, 162, 239) 25%, rgb(0, 114, 245) 100%);
+}
+
 ::-webkit-scrollbar,
 ::-webkit-scrollbar-track {
 	width: 6px;
