@@ -2,7 +2,7 @@
 	import { links } from '@resources/navigation';
 </script>
 
-<header class="w-full h-16 fixed top-o border-b-[1px] px-5 bg-transparent backdrop-blur-[7px]">
+<header class="w-full h-16 fixed top-0 border-b-[1px] px-5 bg-transparent backdrop-blur-[7px]">
 	<div class="mx-auto h-full max-w-screen-xl text-white flex items-center justify-between">
 		<a href="/" target="self">FelipeOrnelis.com</a>
 
