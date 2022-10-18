@@ -6,7 +6,9 @@
 	<title>Felipe Ornelis — Fullstack Developer</title>
 </svelte:head>
 
-<section class="w-full h-screen flex items-center justify-center flex-col px-4 gap-16 mt-20">
+<section
+	class="w-full h-screen flex items-center justify-center flex-col px-4 gap-9 lg:gap-16 mt-20 lg:mt-0"
+>
 	<div class="text-center">
 		<h2 class="text-white text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tighter">
 			Where <span class="bg-clip-text text-transparent text-gradient-blue">ideas</span>
