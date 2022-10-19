@@ -7,7 +7,7 @@
 </svelte:head>
 
 <section
-	class="w-full h-screen flex items-center justify-center flex-col px-4 gap-9 lg:gap-16 landscape:mt-20"
+	class="w-full h-screen flex items-center justify-center flex-col px-4 gap-9 lg:gap-16 landscape:pt-20"
 >
 	<div class="text-center">
 		<h2 class="text-white text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tighter">
