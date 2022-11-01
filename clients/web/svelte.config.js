@@ -12,7 +12,6 @@ const config = {
 		alias: {
 			'@components/*': 'src/ui/components/*',
 			'@styles/*': 'src/styles/*',
-			'@resources/*': 'src/resources/*',
 		}
 	}
 };

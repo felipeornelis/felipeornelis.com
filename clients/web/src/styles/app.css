@@ -2,21 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-	@apply bg-black text-white font-sans;
+@layer base {
+	body {
+		@apply bg-black text-white font-sans;
+	}
+	
+	::-webkit-scrollbar,
+	::-webkit-scrollbar-track {
+		width: 6px;
+		scrollbar-width: 6px;
+	}
+	
+	::-webkit-scrollbar-thumb {
+		background-color: #292929;
+		border: 1px solid #3b3a3a;
+	}	
 }
 
-.text-gradient-blue {
-	background-image: linear-gradient(rgb(94, 162, 239) 25%, rgb(0, 114, 245) 100%);
-}
+@layer components {
+	.text-gradient-blue {
+		background-image: linear-gradient(rgb(94, 162, 239) 25%, rgb(0, 114, 245) 100%);
+	}
+}	
 
-::-webkit-scrollbar,
-::-webkit-scrollbar-track {
-	width: 6px;
-	scrollbar-width: 6px;
-}
-
-::-webkit-scrollbar-thumb {
-	background-color: #292929;
-	border: 1px solid #3b3a3a;
-}
