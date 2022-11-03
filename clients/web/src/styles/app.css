@@ -4,24 +4,46 @@
 
 @layer base {
 	body {
-		@apply bg-black text-white font-sans;
+		@apply bg-[#0C1014] text-white font-sans;
 	}
-	
+
 	::-webkit-scrollbar,
 	::-webkit-scrollbar-track {
 		width: 6px;
 		scrollbar-width: 6px;
 	}
-	
+
 	::-webkit-scrollbar-thumb {
 		background-color: #292929;
 		border: 1px solid #3b3a3a;
-	}	
+	}
+
+	a,
+	a:visited {
+		color: #35b7fd;
+		font-size: 20px;
+		position: relative;
+	}
+
+	a::after {
+		content: '';
+		position: absolute;
+		width: 0;
+		border-bottom: 2px solid #35b7fd;
+		bottom: 0;
+		left: 0;
+		top: 27px;
+
+		transition: all 0.2s ease;
+	}
+
+	a:hover::after {
+		width: 100%;
+	}
 }
 
 @layer components {
-	.text-gradient-blue {
+	.fo-gradient-blue {
 		background-image: linear-gradient(rgb(94, 162, 239) 25%, rgb(0, 114, 245) 100%);
 	}
-}	
-
+}
