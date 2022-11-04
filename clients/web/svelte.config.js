@@ -11,6 +11,8 @@ const config = {
 		adapter: adapter(),
 		alias: {
 			'@components/*': 'src/ui/components/*',
+			'@compositions': 'src/ui/compositions/*',
+			'@icons/*': 'src/ui/icons/*',
 			'@styles/*': 'src/styles/*',
 		}
 	}

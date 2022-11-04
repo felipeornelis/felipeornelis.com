@@ -1,4 +1,8 @@
 <script lang="ts">
+	import Principles from '@compositions/principles.svelte';
+	import Posts from '@compositions/posts.svelte';
+	import Link from '@components/link.svelte';
+	import Title from '@components/title.svelte';
 </script>
 
 <svelte:head>
@@ -37,109 +41,30 @@
 		</button>
 	</section>
 	<section class="w-[1200px] mx-auto flex justify-between items-center">
-		{#each [0, 0, 0] as item}
-			<div
-				class="w-[370px] h-[252px] bg-[#10151B]  border-light-gray border-solid border-[1px] rounded-[14px]"
-			>
-				<div class="w-full h-full flex flex-col justify-between items-center px-[44px] py-[26px]">
-					<p>
-						<svg
-							width="39"
-							height="39"
-							viewBox="0 0 39 39"
-							fill="none"
-							xmlns="http://www.w3.org/2000/svg"
-						>
-							<g clip-path="url(#clip0_27_28)">
-								<path
-									d="M19.5 24.375H14.625V19.5L29.25 4.875L34.125 9.75L19.5 24.375Z"
-									stroke="white"
-									stroke-width="1.5"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-								/>
-								<path
-									d="M25.5938 8.53125L30.4688 13.4062"
-									stroke="white"
-									stroke-width="1.5"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-								/>
-								<path
-									d="M32.9062 18.2812V31.6875C32.9062 32.0107 32.7778 32.3207 32.5493 32.5493C32.3207 32.7778 32.0107 32.9062 31.6875 32.9062H7.3125C6.98927 32.9062 6.67927 32.7778 6.45071 32.5493C6.22215 32.3207 6.09375 32.0107 6.09375 31.6875V7.3125C6.09375 6.98927 6.22215 6.67927 6.45071 6.45071C6.67927 6.22215 6.98927 6.09375 7.3125 6.09375H20.7188"
-									stroke="white"
-									stroke-width="1.5"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-								/>
-							</g>
-							<defs>
-								<clipPath id="clip0_27_28">
-									<rect width="39" height="39" fill="white" />
-								</clipPath>
-							</defs>
-						</svg>
-					</p>
-					<p class="text-center text-[20px]">
-						Tutorials and fresh content about technology and legal stuff
-					</p>
-					<p><a href="#/">Learn more</a></p>
-				</div>
-			</div>
-		{/each}
+		<Principles />
 	</section>
 	<section class="w-[1200px] mx-auto">
-		<div>
-			<h2 class="font-semibold text-white tracking-tighter text-[56px] text-center">
-				What makes the development better
-			</h2>
-			<p>Aloha</p>
-		</div>
-	</section>
-	<section class="w-[1200px] mx-auto">
-		<div>
-			<div>
-				<h2 class="font-semibold text-white tracking-tighter text-[56px] text-center">
-					The latest publications
-				</h2>
-				<p class="text-center text-[#627486] text-[22px] leading-[32px]">
-					I have written some nice stuff. Check them out below.
-				</p>
-				<p class="text-[20px] text-center"><a href="#!">Learn more</a></p>
-			</div>
+		<Title title="What makes the development better" />
 
-			<div class="w-full flex items-center justify-between mt-[68px]">
-				{#each Array(3) as article}
-					<article
-						id={article}
-						class="w-[370px] h-[252px] bg-[#10151B]  border-light-gray border-solid border-[1px] rounded-[14px]"
-					>
-						<div class="w-full h-full flex flex-col justify-between px-[44px] py-[26px]">
-							<div>
-								<span>Here goes tech</span>
-							</div>
-							<header>
-								<h3 class="text-[22px] font-semibold tracking-[0.23px]">Sveltekit and Vercel</h3>
-							</header>
-							<p class="text-[20px] leading-[29px] tracking-[0.23px]">
-								In just a few steps, your project will be available to the entire world.
-							</p>
-						</div>
-					</article>
-				{/each}
-			</div>
+		<p>Aloha</p>
+	</section>
+	<section class="w-[1200px] mx-auto">
+		<Title
+			title="The latest publications"
+			description="I have written some nice stuff. Check them out below."
+			to="/articles"
+		/>
+
+		<div class="w-full flex items-center justify-between mt-[68px]">
+			<Posts />
 		</div>
 	</section>
 	<section class="w-[1200px] mx-auto">
-		<header>
-			<h2 class="font-semibold text-white tracking-tighter text-[56px] text-center">
-				From the Labs
-			</h2>
-			<p class="text-center text-[#627486] text-[22px] leading-[32px]">
-				Try out one of these latest creations of mine.
-			</p>
-			<p class="text-[20px] text-center"><a href="#!">Learn more</a></p>
-		</header>
+		<Title
+			title="From the Labs"
+			description="Try out one these latest creations of mine."
+			to="/labs"
+		/>
 
 		<div class="w-full flex justify-between">
 			{#each [0, 0] as item}
@@ -158,19 +83,18 @@
 					<div class="flex flex-col gap-6 text-center py-[26px] px-[44px] ">
 						<h3 class="text-[22px] font-bold">Cryptrack</h3>
 						<p class="text-[20px]">Lorem ipsum dolor sit amet, consectetur adiscing elit.</p>
-						<p class="text-[20px]"><a href="#!">Learn more</a></p>
+						<p class="text-[20px]">
+							<Link href="/labs" label="Learn more" />
+						</p>
 					</div>
 				</article>
 			{/each}
 		</div>
 	</section>
 	<section class="w-[1200px] mx-auto">
-		<header>
-			<h2 class="font-semibold text-white tracking-tighter text-[56px] text-center">
-				Any question? Say "Hello"
-			</h2>
-		</header>
-		<div class="w-full mt-16 flex flex-col gap-8 items-center">
+		<Title title="Any question? Say 'Hello'" />
+
+		<div class="w-full flex flex-col gap-8 items-center">
 			<p class="text-[20px]">hey@felipeornelis.com</p>
 			<p>or</p>
 			<button
