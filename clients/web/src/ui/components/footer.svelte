@@ -1,5 +1,5 @@
 <footer
-	class="w-full h-[62px] mt-[102px] bg-black border-t border-t-light-gray flex justify-between items-center px-5"
+	class="w-full h-[62px] flex-shrink-0 mt-[102px] bg-black border-t border-t-light-gray flex justify-between items-center px-5"
 >
 	<span>
 		<a href="#!" class="text-white">FelipeOrnelis</a>
