@@ -4,7 +4,7 @@
 
 @layer base {
 	body {
-		@apply bg-[#0C1014] text-white font-sans;
+		@apply bg-[#0C1014] text-white font-sans h-screen;
 	}
 
 	::-webkit-scrollbar,
@@ -17,33 +17,32 @@
 		background-color: #292929;
 		border: 1px solid #3b3a3a;
 	}
-
-	/* a,
-	a:visited {
-		color: #35b7fd;
-		font-size: 20px;
-		position: relative;
-	}
-
-	a::after {
-		content: '';
-		position: absolute;
-		width: 0;
-		border-bottom: 2px solid #35b7fd;
-		bottom: 0;
-		left: 0;
-		top: 27px;
-
-		transition: all 0.2s ease;
-	}
-
-	a:hover::after {
-		width: 100%;
-	} */
 }
 
 @layer components {
 	.fo-gradient-blue {
-		background-image: linear-gradient(rgb(94, 162, 239) 25%, rgb(0, 114, 245) 100%);
+		background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab, #bec423);
+		background-size: 400% 400%;
+		animation-name: colour-transition;
+		animation-duration: 4s;
+		animation-iteration-count: infinite;
+	}
+
+	@keyframes colour-transition {
+		0% {
+			background-position: 0% 50%;
+		}
+		25% {
+			background-position: 25% 75%;
+		}
+		50% {
+			background-position: 100% 50%;
+		}
+		75% {
+			background-position: 75% 25%;
+		}
+		100% {
+			background-position: 0% 50%;
+		}
 	}
 }
