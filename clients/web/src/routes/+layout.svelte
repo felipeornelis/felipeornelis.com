@@ -7,8 +7,10 @@
 
 <div class="h-full w-full flex flex-col justify-between">
 	<Header />
+
 	<main class="mt-[120px]">
 		<slot />
 	</main>
+
 	<Footer />
 </div>

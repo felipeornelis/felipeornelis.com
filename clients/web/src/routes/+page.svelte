@@ -44,11 +44,6 @@
 		<Principles />
 	</section>
 	<section class="w-[1200px] mx-auto">
-		<Title title="What makes the development better" />
-
-		<p>Aloha</p>
-	</section>
-	<section class="w-[1200px] mx-auto">
 		<Title
 			title="The latest publications"
 			description="I have written some nice stuff. Check them out below."

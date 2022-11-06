@@ -28,6 +28,10 @@
 		animation-iteration-count: infinite;
 	}
 
+	.xxx > div + div {
+		margin-left: -9px;
+	}
+
 	@keyframes colour-transition {
 		0% {
 			background-position: 0% 50%;

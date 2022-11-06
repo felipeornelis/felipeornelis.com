@@ -13,7 +13,10 @@ const config = {
 			'@components/*': 'src/ui/components/*',
 			'@compositions': 'src/ui/compositions/*',
 			'@icons/*': 'src/ui/icons/*',
+			'@mocks/*': 'src/mocks/*',
+			'@resources': 'src/resources/*',
 			'@styles/*': 'src/styles/*',
+			'@types/*': 'src/types/*',
 		}
 	}
 };

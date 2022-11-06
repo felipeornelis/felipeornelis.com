@@ -5,7 +5,7 @@
 		<a href="#!" class="text-white">FelipeOrnelis</a>
 	</span>
 
-	<span> Copyright &copy; 2022 Felipe Ornelis. All rights reserved. </span>
+	<span> Copyright &copy; 2022 Felipe Ornelis. All rights reserved.</span>
 
 	<ul class="flex items-center gap-6 h-full">
 		<li>
