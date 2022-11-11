@@ -1,38 +1,14 @@
-# create-svelte
+# FelipeOrnelis.com
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+Hi! This is my web platform where I share my knowledge and experience about software development and software quality. It's still under development and you can follow the progress here.
 
-## Creating a project
+# To-do
 
-If you're seeing this, you've probably already done this step. Congrats!
+- [] `<PostCard />` component: change the `xxx` class name to a more semantic one;
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+# What I've done
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+- Created an instance ID for `<FelipeOrnelis />` icon component;
+- Changed the `<Button />` component to receive `$$restProps`
+- Replaced favicon
+- Replace `<FelipeOrnelis />` icon to a new SVG image (why the hell then you created the instance for the component? No clue, dude!)

@@ -1,3 +1,7 @@
+<script lang="ts" context="module">
+	let componentInstance = 0;
+</script>
+
 <script lang="ts">
 	export let size: number;
 	export let white: boolean = false;
@@ -10,8 +14,8 @@
 		bottomStopColor = '#ffffff';
 	}
 
-	const idDiff = new Date().getTime().toString().substr(-2, 2);
-	const svgPathId = `paint0_linear_107_61_${idDiff}`;
+	const svgPathId = `paint0_linear_107_61_${componentInstance}`;
+	componentInstance++;
 </script>
 
 <svg

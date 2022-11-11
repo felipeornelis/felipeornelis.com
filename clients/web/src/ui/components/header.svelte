@@ -7,7 +7,8 @@
 >
 	<div class="max-w-[1200px] mx-auto flex items-center h-full justify-between">
 		<a href="/">
-			<Felipeornelis size={38} />
+			<!-- <Felipeornelis size={38} /> -->
+			<img class="h-full w-[38px]" src="/felipeornelis-icon.svg" alt="FelipeOrnelis.com logo" />
 		</a>
 
 		<nav>

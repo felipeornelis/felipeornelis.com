@@ -32,6 +32,10 @@
 		margin-left: -9px;
 	}
 
+	.contact-layer-container {
+		background-image: linear-gradient(92.1deg, #fa5c7f 0.01%, #6e81f8 94.4%);
+	}
+
 	@keyframes colour-transition {
 		0% {
 			background-position: 0% 50%;
