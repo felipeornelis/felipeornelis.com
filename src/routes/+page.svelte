@@ -1,6 +1,35 @@
-<section class="w-full flex items-center justify-center text-center">
-	<div class="flex flex-col">
-		<strong class="text-[#fffffd] font-poppins font-normal text-2xl lg:text-4xl">Felipe Ornelis</strong>
-		<span class="text-[#5b5a67] font-poppins font-normal lg:text-xl">Software Engineer</span>
-	</div>
-</section>
+<script>
+    import { Hero, Section } from '$lib/components';
+	import Metadata from '$lib/components/metadata/metadata.svelte';
+    import { FeatureCardComposition } from '$lib/compositions';
+	import { 
+        TechStackSection,
+        RecentWorkSection,
+        RecentPostsSection,
+    } from '$lib/sections';
+
+    /** @type {import('./$types').PageData}*/
+    export let data;
+</script>
+
+<Metadata
+    title=""
+/>
+
+<Hero />
+
+<Section variant>
+    <TechStackSection />
+</Section>
+
+<Section>
+    <FeatureCardComposition />
+</Section>
+
+<Section>
+    <RecentPostsSection articles={data.articles}/>
+</Section>
+
+<Section variant>
+    <RecentWorkSection />
+</Section>

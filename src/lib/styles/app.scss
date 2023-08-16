@@ -1,0 +1,147 @@
+@import './themes/default';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --body-bg-color: #{$body-background-color};
+    --hero-bg-color: #{$hero-background-color};
+    --text-color: #{$text-color};
+
+    /** Font family */
+    --inter: 'Inter', Arial, Helvetic, -ui-system, sans-serif;
+
+    /** Font size */
+    --font-small: 0.875rem;
+    --font-normal: 1rem;
+    --font-large: 1.125rem;
+    --font-big: 1.5rem;
+    --font-xl: 2rem;
+
+    /** Font weights */
+    --normal: 400;
+    --medium: 500;
+    --semibold: 600;
+    --bold: 700;
+    --extrabold: 800;
+
+    /** Max width and height values */
+    --max-xs: 20rem;
+    --max-sm: 24rem;
+    --max-md: 28rem;
+    --max-lg: 32rem;
+    --max-xl: 36rem;
+    --max-boundary: 72rem;
+    --max-content-width: 43rem;
+
+    /** Section */
+    --section-bg-color: #{$section-background-color};
+    --section-alternative-bg-color: #{$section-alternative-background-color};
+
+    /** Navigator */
+    --navigator-height: 4.25rem;
+
+    // Breakpoints
+    --screen-table: 640px;
+    --screen-laptop: 1024px;
+    --screen-desktop: 1280px;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: var(--body-bg-color);
+    color: var(--text-color);
+    font-family: var(--inter);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+button {
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+a,
+a:hover,
+a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+ol {
+    list-style: none;
+    display: flex;
+}
+
+.nav-link {
+    display: inline-block;
+    position: relative;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.25rem;
+    overflow: hidden;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 100%;
+        left: 0;
+        top: 0;
+        transition: width 200ms linear;
+        background: rgba(255, 255, 255, 0.08);
+    }
+
+    &:hover::after {
+        width: 100%;
+    }
+}
+
+p {
+    line-height: 1.625rem;
+}
+
+p + p {
+    margin-top: 2.25rem;
+}
+
+
+.axj3s {
+    --anchor-color: #ffffff;
+    --anchor-underscore-height: 1px;
+    color: var(--anchor-color);
+    position: relative;
+    width: fit-content;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: calc(var(--anchor-underscore-height) * -1);
+        left: 0;
+        width: 0;
+        height: var(--anchor-underscore-height);
+        background-color: var(--anchor-color);
+        transition: width 200ms ease-in-out;
+    }
+
+    &:hover::after {
+        width: 100%;
+    }
+}

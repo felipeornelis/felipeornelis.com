@@ -1,22 +1,53 @@
 <script>
-    import { Sidebar, Metadata } from '$lib/components';
+    import '$lib/styles/app.scss';
 
-    import '$lib/styles/app.css';
+    import { Footer, Navigator, Metadata, CookiesDisclaimer } from '$lib/components';
+	import { CallToActionSection } from '$lib/sections';
+	import { cookiesDisclaimer } from '$lib/stores/cookies-disclaimer';
+	import { cookiesConsent } from '$lib/services/cookies-disclaimer';
+	import { onMount } from 'svelte';
+
+    /** @type {boolean}*/
+    let showCookiesDisclaimer;
+
+    onMount(() => {
+        if (!cookiesConsent.get()) {
+            showCookiesDisclaimer = true;
+        }
+    });
 </script>
 
-<Metadata />
+<Metadata
+    title={undefined}
+    description="oie oeieoie"
+    keywords="lindo,tesao,bonito,bostao"
+    article={{
+        title: 'oie',
+        description: 'oie',
+        href: '/',
+        publishedAt: new Date(),
+        updatedAt: undefined,
+        tags: 'oie'
+    }}
+/>
 
-<div class="w-screen h-screen flex">
-    <Sidebar />
+<Navigator />
 
-    <main class="w-full h-full flex flex-col justify-between items-center px-10 lg:px-40 py-10">
-        <div></div>
+<main>
+    <slot />
+</main>
 
-        <slot/>
+<CallToActionSection />
 
-        <footer class="w-full flex flex-col items-center gap-1">
-            <span class="text-[#fffffd] font-poppins text-center text-sm lg:text-base">hello@felipeornelis.com</span>
-            <p class="text-[#5b5a67] font-poppins text-center text-sm lg:text-base">&copy; Felipe Ornelis 2023. All rights reserved.</p>
-        </footer>
-    </main>
-</div>
+<Footer />
+
+{#if showCookiesDisclaimer && $cookiesDisclaimer}
+    <CookiesDisclaimer />
+{/if}
+
+
+<style lang="scss">
+    main {
+        display: inherit;
+    }
+</style>
