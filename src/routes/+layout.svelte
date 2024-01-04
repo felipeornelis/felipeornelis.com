@@ -11,6 +11,7 @@
     let showCookiesDisclaimer;
 
     onMount(() => {
+	window.location.href = 'https://linkedin.com/in/felipeornelis'
         if (!cookiesConsent.get()) {
             showCookiesDisclaimer = true;
         }
