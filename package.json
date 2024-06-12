@@ -39,6 +39,7 @@
   "dependencies": {
     "mdsvex": "^0.11.0",
     "parse-md": "^3.0.3",
-    "svelte-preprocess": "^5.0.4"
+    "svelte-preprocess": "^5.0.4",
+    "zod": "^3.23.8"
   }
 }
