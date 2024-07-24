@@ -1,1 +1,0 @@
-export { default as RecentWorkSection } from './recent-work.svelte';

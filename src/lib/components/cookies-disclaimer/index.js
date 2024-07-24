@@ -1,1 +1,0 @@
-export { default as CookiesDisclaimer } from './cookies-disclaimer.svelte';
