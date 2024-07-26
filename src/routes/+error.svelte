@@ -4,7 +4,7 @@
 
 <section class="app">
     <div>
-        <h1>Felipe Ornelis</h1>
+        <h1>Page not found</h1>
         <p>This website is currently under construction.</p>
         <p>hello@felipeornelis.com</p>
     </div>
