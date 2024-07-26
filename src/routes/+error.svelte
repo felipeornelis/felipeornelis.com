@@ -2,6 +2,10 @@
     import '../app.css';
 </script>
 
+<svelte:head>
+    <title>Page not found - Felipe Ornelis</title>
+</svelte:head>
+
 <section class="app">
     <div>
         <h1>Page not found</h1>

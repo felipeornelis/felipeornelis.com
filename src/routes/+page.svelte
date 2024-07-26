@@ -2,6 +2,10 @@
     import '../app.css';
 </script>
 
+<svelte:head>
+    <title>Felipe Ornelis</title>
+</svelte:head>
+
 <section class="app">
     <div>
         <h1>Felipe Ornelis</h1>
