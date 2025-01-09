@@ -3,6 +3,7 @@
 	import favicon from '$lib/assets/favicon.svg';
 	import '../app.css';
 	import NavigatorSearchRoot from '$lib/components/navigator/navigator-search-root.svelte';
+	import { Footer } from '$lib/components/footer';
 
 	let { children } = $props();
 
@@ -44,9 +45,9 @@
 		<Navigator>
 			<NavigatorItemsRoot>
 				<NavigatorItem href="/collection" label="Coletânea"/>
-				<NavigatorItem href="/courses" label="Cursos"/>
-				<NavigatorItem href="/podcast" label="Podcast"/>
-				<NavigatorItem href="/services" label="Services"/>
+				<NavigatorItem href="/posts" label="Publicações"/>
+				<NavigatorItem href="/bookmarks" label="Marcadores"/>
+				<NavigatorItem href="/projects" label="Acervo"/>
 			</NavigatorItemsRoot>
 
 			<NavigatorSearchRoot>
@@ -67,7 +68,5 @@
 		{@render children?.()}
 	</main>
 
-	<footer>
-		<p>FelipeOrnelis.com</p>
-	</footer>
+	<Footer />
 </div>

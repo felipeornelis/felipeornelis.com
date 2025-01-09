@@ -13,6 +13,7 @@
 
 <a
     {href}
+    draggable="false"
     class={navigator_item({ status: page.url.pathname === href ? 'active' : 'inactive' })}
     {...props}
 >
