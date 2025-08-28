@@ -1,0 +1,30 @@
+@import 'tailwindcss';
+
+:root {
+	--primary: oklch(0.7042 0.1466 233.7);
+	--accent: oklch(0.7042 0.1466 233.7);
+	--background: oklch(14.5% 0 0);
+	--foreground: oklch(98.5% 0 0);
+}
+
+.light {
+	color-scheme: light;
+}
+
+.dark {
+	color-scheme: dark;
+}
+
+@theme {
+	--color-primary: var(--primary);
+	--color-accent: var(--accent);
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+	--spacing-default: 1168px;
+	--font-sans: Poppins, Arial, Helvetica, system-ui, -apple-system, sans-serif;
+}
+
+html,
+body {
+	height: 100%;
+}
