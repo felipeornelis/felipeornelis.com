@@ -30,7 +30,7 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-<div class="min-h-screen bg-background">
+<div class="min-h-screen bg-background flex flex-col relative transition-[padding]">
 	<div class="top-0 left-0 right-0 z-50 h-auto sticky">
 
 		{#if show_creepy_mind_ads}
@@ -59,5 +59,11 @@
 		</Navigator>
 	</div>
 
-	{@render children?.()}
+	<main class="h-full flex-1">
+		{@render children?.()}
+	</main>
+
+	<footer>
+		<p>FelipeOrnelis.com</p>
+	</footer>
 </div>
