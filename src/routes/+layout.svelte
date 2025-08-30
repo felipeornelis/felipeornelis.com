@@ -43,7 +43,7 @@
 
 		<Navigator>
 			<NavigatorItemsRoot>
-				<NavigatorItem href="/" label="Coletânea"/>
+				<NavigatorItem href="/collection" label="Coletânea"/>
 				<NavigatorItem href="/courses" label="Cursos"/>
 				<NavigatorItem href="/podcast" label="Podcast"/>
 				<NavigatorItem href="/services" label="Services"/>
