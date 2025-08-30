@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Navigator, NavigatorItem, NavigatorItemsRoot, NavigatorSearchButton, NavigatorSearchContainer, NavigatorSearchTrigger } from '$lib/components/navigator';
+	import { Navigator, NavigatorItem, NavigatorItemsRoot, NavigatorOverlay, NavigatorSearchButton, NavigatorSearchContainer, NavigatorSearchTrigger } from '$lib/components/navigator';
 	import favicon from '$lib/assets/favicon.svg';
 	import '../app.css';
 	import NavigatorSearchRoot from '$lib/components/navigator/navigator-search-root.svelte';
@@ -31,7 +31,7 @@
 </svelte:head>
 
 <div class="min-h-screen bg-background flex flex-col relative transition-[padding]">
-	<div class="top-0 left-0 right-0 z-50 h-auto sticky">
+	<div class="top-0 left-0 right-0 z-[100] h-auto sticky">
 
 		{#if show_creepy_mind_ads}
 		<div class="h-11 bg-zinc-300 w-full text-background flex items-center justify-between px-5">
@@ -58,6 +58,10 @@
 			</NavigatorSearchRoot>
 		</Navigator>
 	</div>
+
+	<NavigatorOverlay>
+		<p>Lorem ipsum dolor sit amet</p>
+	</NavigatorOverlay>
 
 	<main class="h-full flex-1">
 		{@render children?.()}

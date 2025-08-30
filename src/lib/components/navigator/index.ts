@@ -5,3 +5,4 @@ export { default as NavigatorItemsRoot } from './navigator-items-root.svelte';
 export { default as NavigatorSearchRoot } from './navigator-search-root.svelte';
 export { default as NavigatorSearchTrigger } from './navigator-search-trigger.svelte';
 export { default as NavigatorSearchContainer } from './navigator-search-container.svelte';
+export { default as NavigatorOverlay } from './navigator-overlay.svelte';
