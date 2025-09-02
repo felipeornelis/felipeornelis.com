@@ -32,8 +32,6 @@ const posts: ArticleProps[] = [
 ];
 
 export const GET: RequestHandler = async ({ params }) => {
-	await sleep(10_000);
-
 	return json({ posts });
 };
 
