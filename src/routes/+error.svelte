@@ -26,11 +26,11 @@
             {#each {length:3}}
                 <SpotlightCardRoot>
                     <SpotlightCardHeading>
-                        CreepyMind Club
+                        Lorem ipsum dolor
                     </SpotlightCardHeading>
 
                     <SpotlightCardContent>
-                        Faça parte do nosso clube de vantagens e desfrute de todo o conteúdo exclusivo.
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus voluptatibus repellat iusto fugit impedit.
                     </SpotlightCardContent>
                 </SpotlightCardRoot>
             {/each}

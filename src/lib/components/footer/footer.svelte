@@ -6,7 +6,7 @@
 </script>
 
 <footer class="w-full py-5">
-    <div class="max-w-default mx-auto flex items-center justify-between">
+    <div class="max-w-default mx-auto flex items-center justify-between pt-[3rem]">
         <span class="text-muted-foreground text-sm">
             Copyright &copy; {year} Felipe Ornelis. Todos os direitos reservados.
         </span>
