@@ -9,7 +9,9 @@
 	--secondary-foreground: oklch(14.5% 0 0);
 	--accent: oklch(0.7042 0.1466 233.7);
 	--accent-foreground: oklch(98.5% 0 0);
+	--muted: oklch(0.4419 0.0146 285.79);
 	--muted-foreground: oklch(0.4419 0.0146 285.79);
+	--border: oklch(100% 0 0/0.1);
 }
 
 .light {
@@ -29,6 +31,7 @@
 	--color-secondary-foreground: var(--secondary-foreground);
 	--color-background: var(--background);
 	--color-foreground: var(--foreground);
+	--color-muted: var(--muted);
 	--color-muted-foreground: var(--muted-foreground);
 	--spacing-default: 1168px;
 	--font-sans: Poppins, Arial, Helvetica, system-ui, -apple-system, sans-serif;
@@ -37,4 +40,9 @@
 html,
 body {
 	height: 100%;
+}
+
+* {
+	border-color: var(--border);
+	outline-color: var(--ring);
 }

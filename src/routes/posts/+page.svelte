@@ -23,7 +23,6 @@
     <div class="w-full grid grid-cols-3 gap-7">
 
         {#await fetchPosts()}
-
             {#each {length:6}}
             
         <article class="w-full max-w-80" draggable="false">
@@ -31,7 +30,7 @@
                 <div class="w-full bg-muted-foreground animate-pulse rounded-md h-48 relative overflow-hidden">
                 </div>
 
-                <div class="cu">
+                <div class="relative">
                     <div class="bg-muted-foreground animate-pulse rounded-md h-4 w-[202px]" data-slot="skeleton"></div>
                 </div>
 
