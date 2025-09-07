@@ -4,6 +4,7 @@
 	import '../app.css';
 	import NavigatorSearchRoot from '$lib/components/navigator/navigator-search-root.svelte';
 	import { Footer } from '$lib/components/footer';
+	import { WindowPlayer } from '$lib/components/ui/window-player';
 
 	let { children } = $props();
 
@@ -69,4 +70,6 @@
 	</main>
 
 	<Footer />
+
+	<WindowPlayer />
 </div>
