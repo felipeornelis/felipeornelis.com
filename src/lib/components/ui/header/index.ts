@@ -1,3 +1,3 @@
-import Header from './header.svelte';
+import Header, { type Props } from './header.svelte';
 
-export { Header };
+export { Header, type Props as HeaderProps };

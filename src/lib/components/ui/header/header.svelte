@@ -1,7 +1,7 @@
 <script lang="ts">
     import type { Component } from "svelte";
 
-    interface Props {
+    export interface Props {
         icon: Component;
         title: string;
         description: string;

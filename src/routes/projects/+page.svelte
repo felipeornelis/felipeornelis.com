@@ -2,6 +2,9 @@
 	import { Header } from "$lib/components/ui/header";
 	import { Skeleton } from "$lib/components/ui/skeleton";
 	import { FlaskConical } from "@lucide/svelte";
+	import ProjectsSkeleton from "./_components/projects-skeleton.svelte";
+	import ProjectsGrid from "./_components/projects-grid.svelte";
+	import { cva, type VariantProps } from "class-variance-authority";
 
     const mocked_projects: { category: string; name: string; description: string, link: string }[] = [
         {
@@ -19,10 +22,38 @@
     ]
 
     async function fetchProjects() {
-        await new Promise((resolve) => setTimeout(resolve, 1000));
+        await new Promise((resolve) => setTimeout(resolve, 1_000));
 
-        return mocked_projects
+        return [];
     }
+
+    const content = cva('w-full', {
+        variants: {
+            format: {
+                grid: 'grid grid-cols-3 gap-7',
+                flex: 'flex flex-col items-center space-y-5'
+            }
+        } 
+    });
+
+    type ContentFormat = VariantProps<typeof content>;
+
+    let loaded = $state<undefined | any>(undefined);
+    let contentFormat = $derived.by(() => {
+        if (loaded === undefined) {
+            return 'grid'
+        }
+
+        if (Array.isArray(loaded) && loaded.length > 0) {
+            return 'grid'
+        }
+
+        return 'flex';
+    }) as unknown as  ContentFormat
+
+    $effect(() => {
+        fetchProjects().then(r => loaded = r)
+    })
 </script>
 
 <Header
@@ -33,51 +64,25 @@
 
 <section class="relative">
     <div class="max-w-default mx-auto flex flex-col">
-        
-        <div class="w-full grid grid-cols-3 gap-7">
+        <div class={content({ format:  contentFormat })}>
             {#await fetchProjects()}
-                {#each {length:6}}
-
-                 <div class="w-full border rounded relative p-6">
-    <div class="w-full flex flex-col">
-        <div class="flex flex-col items-center gap-1.5">
-            <Skeleton class="w-[70px]"/>
-            <Skeleton class="w-[150px]"/>
-            
-            <div class="w-full flex gap-1 justify-center flex-wrap mt-5">
-                <Skeleton class="w-[70px]"/>
-                <Skeleton class="w-[60px]"/>
-                <Skeleton class="w-[60px]"/>
-                <Skeleton class="w-[135px]"/>
-                <Skeleton class="w-[135px]"/>
-            </div>
-        </div>
-    </div>
-</div>
-                    
-                {/each}
-
-            {:then projects }
-            {#each projects as { category, name, description, link }, i}
-                <a 
-                class="ease-linear hover:before:bg-primary/5  hover:before:border-primary relative flex items-center gap-3 rounded border p-6 transition-all before:absolute before:top-0 before:left-0 before:-z-10 before:size-full before:rounded before:border before:border-transparent before:transition-all hover:-translate-y-1.5"
-                href={link}
-            >
-                    <div class="w-full flex flex-col">
-                        <hgroup class="flex flex-col items-center gap-0.5">
-                            <p class="text-primary flex items-center gap-1.5 text-xs font-semibold uppercase">
-                                {category}
-                            </p>
-                            <h3 class="mb-1.5 text-2xl">{name}</h3>
-                            <p class="text-muted-foreground leading-5 text-center text-sm">
-                                {description}
-                            </p>
-                        </hgroup>
-                    </div>
-                </a>
-            {/each}
+                <ProjectsSkeleton />
+            {:then projects}
+                <ProjectsGrid data={projects} emptyMessage="Não há projetos publicados no acervo."/>
             {/await}    
         </div>
-
     </div>
 </section>
+
+
+<!-- <section class="relative">
+    <div class="max-w-default mx-auto flex flex-col">
+        <div class={content({ format: })}>
+            {#await fetchProjects()}
+                <ProjectsSkeleton />
+            {:then projects}
+                <ProjectsGrid data={projects} emptyMessage="Não há projetos publicados no acervo."/>
+            {/await}    
+        </div>
+    </div>
+</section> -->

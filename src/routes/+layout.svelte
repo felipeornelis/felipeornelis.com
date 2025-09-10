@@ -5,6 +5,9 @@
 	import NavigatorSearchRoot from '$lib/components/navigator/navigator-search-root.svelte';
 	import { Footer } from '$lib/components/footer';
 	import { WindowPlayer } from '$lib/components/ui/window-player';
+	import { cva, type VariantProps } from 'class-variance-authority';
+	import { Button } from '$lib/components/button';
+	import { audioPlayer } from '$lib/runes/player.svelte';
 
 	let { children } = $props();
 
@@ -25,6 +28,20 @@
 			show_creepy_mind_ads = true;
 		}
 	});
+
+	let pbx = $derived(audioPlayer.isReproducing() ? 'open' : 'closed') as unknown as VariantProps<typeof container>;
+
+	const container = cva('min-h-screen bg-background flex flex-col relative transition-[padding]', {
+		variants: {
+			player: {
+				open: 'pb-20',
+				closed: ''
+			}
+		},
+		defaultVariants: {
+			player: 'closed'
+		}
+	})
 	
 </script>
 
@@ -32,7 +49,7 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-<div class="min-h-screen bg-background flex flex-col relative transition-[padding]">
+<div class={container({ player : pbx })}>
 	<div class="top-0 left-0 right-0 z-[100] h-auto sticky">
 
 		{#if show_creepy_mind_ads}

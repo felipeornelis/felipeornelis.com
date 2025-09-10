@@ -1,4 +1,6 @@
 <script lang="ts">
+    import { audioPlayer } from '$lib/runes/player.svelte'
+
     let is_enabled = $state(true);
 
     function closeWindowPlayer() {
@@ -6,7 +8,7 @@
     }
 </script>
 
-{#if is_enabled}
+{#if audioPlayer.isReproducing()}
     <div class="fixed w-full h-[5.1875] bottom-0 left-0 right-0 z-50">
         <div class="h-full py-[0.8rem] px-[1.2rem] bg-[#141414]/90 supports-[backdrop-filter]:bg-[#141414]/70 backdrop-blur-md border-t">
             <div class="h-full mx-auto flex items-center justify-between gap-[4.5rem]">
