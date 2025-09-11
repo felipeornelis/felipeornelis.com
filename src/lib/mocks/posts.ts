@@ -16,7 +16,7 @@ export const posts: {
 		},
 		title: 'Os diferentes tipos de construtores de classe em Dart',
 		slug: 'os-diferentes-tipos-de-construtores-de-classe-em-dart',
-		image: 'http://localhost:5173/images/brands/dart.svg',
+		image: '/images/brands/dart.svg',
 		publishedAt: new Date(),
 		content: `
 Voluptate proident non anim consectetur incididunt nisi elit laborum minim tempor pariatur. Consectetur id ipsum do officia consectetur eu id. Deserunt qui nostrud eiusmod veniam magna. Pariatur ut aliquip consequat ipsum officia. Culpa ipsum in voluptate tempor Lorem.
@@ -61,7 +61,7 @@ Voluptate proident non anim consectetur incididunt nisi elit laborum minim tempo
 		},
 		title: 'Introdução ao Zig',
 		slug: 'introducao-ao-zig',
-		image: 'http://localhost:5173/images/brands/zig.svg',
+		image: '/images/brands/zig.svg',
 		publishedAt: new Date(),
 		content: `
 Voluptate proident non anim consectetur incididunt nisi elit laborum minim tempor pariatur. Consectetur id ipsum do officia consectetur eu id. Deserunt qui nostrud eiusmod veniam magna. Pariatur ut aliquip consequat ipsum officia. Culpa ipsum in voluptate tempor Lorem.
@@ -117,7 +117,7 @@ In elit dolore laborum minim nulla id excepteur elit. Minim do laborum pariatur 
 		},
 		title: 'O que é e como começar com Golang',
 		slug: 'o-que-e-e-como-comecar-com-golang',
-		image: 'http://localhost:5173/images/brands/go-gopher.svg',
+		image: '/images/brands/go-gopher.svg',
 		publishedAt: new Date(),
 		content: `
 Voluptate proident non anim consectetur incididunt nisi elit laborum minim tempor pariatur. Consectetur id ipsum do officia consectetur eu id. Deserunt qui nostrud eiusmod veniam magna. Pariatur ut aliquip consequat ipsum officia. Culpa ipsum in voluptate tempor Lorem.
