@@ -1,11 +1,9 @@
 <script lang="ts">
 	import { Head } from "$lib/components/head";
 	import Link from "$lib/components/link/link.svelte";
-	import { AudioCard } from "$lib/components/ui/audio-card";
-    import * as WindowPlayer from '$lib/components/ui/window-player'
 
     let metadata = {
-        title: 'Oieeeeee',
+        title: 'Oieexeeee',
     }
 
 </script>

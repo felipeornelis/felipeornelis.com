@@ -17,6 +17,10 @@
             class="placeholder:text-foreground/40 text-foreground bg-transparent h-full focus-visible:outline-0 w-full pr-5"
             placeholder="Pesquisar em felipeornelis.com"
             autofocus
+            tabindex="0"
+            autocapitalize="off"
+            autocomplete="off"
+            autocorrect="off"
             onsubmit={() => alert('oie')}
         />
         </form>

@@ -13,14 +13,14 @@ const posts: ArticleProps[] = [
 			'https://dkrn4sk0rn31v.cloudfront.net/uploads/2022/10/o-que-e-e-como-comecar-com-golang.jpg',
 		title: 'O que é e como começar com Golang',
 		chapeu: 'Linguagem de programação',
-		link: '/posts/os-diferentes-tipos-de-construtores-de-classe-em-dart'
+		link: '/posts/o-que-e-e-como-comecar-com-golang'
 	},
 	{
 		image:
 			'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCnQ1JNUSVPQbyzgX8yFW_ppele0zgL6KtRw&s',
 		title: 'Introdução ao Zig',
 		chapeu: 'Mais uma linguagem de programação',
-		link: '/posts/os-diferentes-tipos-de-construtores-de-classe-em-dart'
+		link: '/posts/introducao-ao-zig'
 	},
 	{
 		image:
