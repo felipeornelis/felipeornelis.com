@@ -1,6 +1,5 @@
 test-results
 node_modules
-src/lib/mocks
 
 # Output
 .output
