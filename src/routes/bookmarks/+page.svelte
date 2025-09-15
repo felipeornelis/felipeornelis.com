@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { SectionHeader } from "$lib/components/section-header";
+	import { Header } from "$lib/components/ui/header";
 	import { Skeleton } from "$lib/components/ui/skeleton";
 	import { Bookmark } from "@lucide/svelte";
 	import Loading from "./loading.svelte";
@@ -30,7 +30,7 @@
 
 </script>
 
-<SectionHeader
+<Header
     icon={Bookmark}
     title="Marcadores"
     description="Culpa minim tempor aliqua culpa mollit. Eiusmod adipisicing nisi veniam qui laborum adipisicing veniam labore enim et eu nostrud elit"

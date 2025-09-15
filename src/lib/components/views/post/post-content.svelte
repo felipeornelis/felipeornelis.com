@@ -8,6 +8,6 @@
     let { children }: Props = $props();
 </script>
 
-<article class="[&>p]:my-5 [&_code]:bg-primary/20 [&_code]:text-primary [&_code]:px-1 [&_code]:py-0.5">
+<article class="[&>p]:my-5 [&_code]:bg-primary/20 [&_code]:text-primary [&_code]:px-1 [&_code]:py-0.5 text-sm md:text-base leading-6">
     {@render children()}
 </article>

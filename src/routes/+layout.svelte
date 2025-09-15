@@ -7,6 +7,7 @@
 	import { GlobalWrapper } from '$lib/components/layout/global-wrapper';
 	import '../app.css';
 	import { items } from '$lib/config/navigation';
+	import { Elevator } from '$lib/components/ui/elevator';
 
 	let { children } = $props();
 
@@ -75,4 +76,6 @@
 	<Footer />
 
 	<WindowPlayer />
+
+	<Elevator />
 </GlobalWrapper>
