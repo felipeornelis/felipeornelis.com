@@ -6,6 +6,7 @@
 	import { WindowPlayer } from '$lib/components/ui/window-player';
 	import { GlobalWrapper } from '$lib/components/layout/global-wrapper';
 	import '../app.css';
+	import { items } from '$lib/config/navigation';
 
 	let { children } = $props();
 
@@ -46,10 +47,11 @@
 
 		<Navigator>
 			<NavigatorItemsRoot>
-				<NavigatorItem href="/collection" label="Coletânea"/>
-				<NavigatorItem href="/posts" label="Publicações"/>
-				<NavigatorItem href="/bookmarks" label="Marcadores"/>
-				<NavigatorItem href="/projects" label="Acervo"/>
+				{#each items as { url, label, available }, i}
+					{#if available}
+						<NavigatorItem href={url} label={label}/>
+					{/if}
+				{/each}
 			</NavigatorItemsRoot>
 
 			<NavigatorSearchRoot>
