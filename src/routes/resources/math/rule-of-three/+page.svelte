@@ -55,7 +55,7 @@
             <Input type="number" name="value3" bind:value={value_3} />
 
             <div class="flex items-center h-full gap-1.5">
-                <Input type="text" name="value4" bind:value={value_4} readonly disabled class="select-none h-full w-full min-w-0 text-center text-accent"/>
+                <Input type="text" name="value4" bind:value={value_4} readonly disabled class="select-none h-full w-full min-w-0 text-center text-accent ring-2"/>
 
                 <Button onclick={() => copy_to_clipboard(value_4)}>
                     <Copy size={14}/>

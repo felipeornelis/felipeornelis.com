@@ -3,8 +3,9 @@
     import { page } from '$app/state';
 	import { navigator_item, type NavigatorItemProps } from './variant';
 
-    interface Props extends HTMLAnchorAttributes{
+    interface Props extends HTMLAnchorAttributes {
         label: string;
+        href: string;
     }
 
     let { label, href, ...props }: Props = $props();
@@ -13,7 +14,7 @@
 <a
     {href}
     draggable="false"
-    class={navigator_item({ status: page.url.pathname === href ? 'active' : 'inactive' })}
+    class={navigator_item({ status: page.url.pathname.startsWith(href) ? 'active' : 'inactive' })}
     {...props}
 >
         {label}

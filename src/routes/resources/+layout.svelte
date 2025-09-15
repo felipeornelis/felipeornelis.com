@@ -18,6 +18,13 @@
             status: 'inactive'
         }
     });
+
+    const resources: { label: string; url: string; }[] = [
+        {
+            label: 'Introdução',
+            url: '/resources',
+        }
+    ]
     
 </script>
 
@@ -25,13 +32,20 @@
 <div class="flex flex-col max-w-default mx-auto">
     <div class="flex flex-1 items-start justify-between">
         <div class="block w-3xs sticky  overscroll-auto border-r bg-none pt-24 overflow-y-auto h-[calc(100vh-64px)] pb-24 scheme-dark [scrollbar-width:thin]">
-            <div class="h-full flex flex-col">
+            <div class="h-full flex flex-col space-y-3">
+                    <a
+                        href="/resources"
+                        draggable="false"
+                        class={anchor({ status: page.url.pathname === '/resources' ? 'active': 'inactive'})}
+                    >
+                        Introdução
+                    </a>
+
                     <a
                         href="/resources/math/rule-of-three"
                         draggable="false"
                         class={anchor({ status: page.url.pathname === '/resources/math/rule-of-three' ? 'active': 'inactive'})}
                     >
-                        <LandPlot />
                         Regra de 3
                     </a>
             </div>
