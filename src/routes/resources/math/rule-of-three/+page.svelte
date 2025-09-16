@@ -43,12 +43,12 @@
             </h1>
 
             <p class="text-muted-foreground">
-                A regra de três simples é um método matemático usado para descobrir um valor desconhecido em problemas de proporção entre duas grandezas. Essa técnica é aplicávle em diversas áreas, como física, química e no cotidiano, para resolver situações práticas onde grandezas são diretamente ou inversamente proporcionais.
+                Recursos > Matemática > Regra de 3
             </p>
         </hgroup>
     </header>
 
-    <div class="relative">
+    <div class="relative flex flex-col gap-10">
         <div class="grid grid-cols-2 gap-1.5 [&>input]:border [&>input]:p-4">
             <Input type="number" name="value_1" bind:value={value_1}  />
             <Input type="number" name="value2" bind:value={value_2} />
@@ -61,6 +61,10 @@
                     <Copy size={14}/>
                 </Button>
             </div>
+        </div>
+
+        <div>
+            <p>A regra de três simples é um método matemático usado para descobrir um valor desconhecido em problemas de proporção entre duas grandezas. Essa técnica é aplicávle em diversas áreas, como física, química e no cotidiano, para resolver situações práticas onde grandezas são diretamente ou inversamente proporcionais.</p>
         </div>
     </div>
 

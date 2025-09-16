@@ -48,7 +48,7 @@
             </div>
         </div>
 
-        <div class="flex min-w-0 w-full flex-col justify-center min-h-full pt-24">
+        <div class="flex min-w-0 w-full flex-col justify-center min-h-full pt-14 md:pt-24">
             <div></div>
             <div class="flex justify-center flex-1">
                 <article class="w-[60rem] min-w-[8rem] max-w-full min-h-full px-5 ">
@@ -81,9 +81,7 @@
     </Drawer.Trigger>
 		<Drawer.Portal>
 			<Drawer.Overlay class="fixed inset-0 bg-background/20 backdrop-blur-md" />
-			<Drawer.Content
-				class="fixed bottom-0 left-0 right-0 mt-24 flex h-[50%] flex-col rounded-t-[10px] bg-zinc-100 z-50"
-			>
+			<Drawer.Content class="fixed bottom-0 left-0 right-0 mt-24 flex h-[50%] flex-col rounded-t-[10px] bg-background z-50 pt-px border-t">
 				<div class="flex-1 rounded-t-[10px] bg-background p-4">
 					<div class="mx-auto mb-8 h-1.5 w-12 flex-shrink-0 rounded-full bg-muted"></div>
 					<div class="mx-auto max-w-md">
@@ -91,18 +89,17 @@
 						
                         <div class="h-full flex flex-col space-y-3">
                             {#each resources as { label, url }}
-                                <Drawer.Close>
-                                    {#snippet child({ props })}
+                                <!-- <Drawer.Close>
+                                    {#snippet child({ props })} -->
                                         <a
                                             href={url}
                                             draggable="false"
-                                            class={anchor({ status: page.url.pathname === url ? 'active': 'inactive'})}
-                                            {...props}
+                                            class={cn("px-3 py-2 rounded text-foreground", page.url.pathname == url && "border border-primary! text-accent bg-primary/10")}
                                         >
                                             {label}
                                         </a>
-                                    {/snippet}
-                                </Drawer.Close>
+                                    <!-- {/snippet}
+                                </Drawer.Close> -->
                             {/each}
                     <!-- <a
                         href="/resources"
