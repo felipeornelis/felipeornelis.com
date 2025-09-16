@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Navigator, NavigatorItem, NavigatorItemsRoot, NavigatorOverlay, NavigatorSearchButton, NavigatorSearchContainer, NavigatorSearchTrigger } from '$lib/components/navigator';
+	import { Navigator, NavigatorItem, NavigatorItemsRoot, NavigatorMobileRoot, NavigatorOverlay, NavigatorSearchButton, NavigatorSearchContainer, NavigatorSearchTrigger } from '$lib/components/navigator';
 	import favicon from '$lib/assets/favicon.svg';
 	import NavigatorSearchRoot from '$lib/components/navigator/navigator-search-root.svelte';
 	import { Footer } from '$lib/components/footer';
@@ -8,6 +8,13 @@
 	import '../app.css';
 	import { items } from '$lib/config/navigation';
 	import { Elevator } from '$lib/components/ui/elevator';
+	import { Button } from '$lib/components/button';
+	import { bodyScroll } from '$lib/runes/body.svelte';
+	import { mobileMenu } from '$lib/runes/mobile-menu.svelte';
+	import { Input } from '$lib/components/ui/input';
+	import { Search, X } from '@lucide/svelte';
+	import { cn } from '$lib/utils';
+	import { page } from '$app/state';
 
 	let { children } = $props();
 
@@ -65,6 +72,31 @@
 		</Navigator>
 	</div>
 
+	<NavigatorMobileRoot>
+		<div class="flex flex-col gap-10">
+			<div class="flex gap-1.5 items-center [&_svg]:size-5">
+				<Input type="search" class="flex-1" placeholder="Pesquisar em felipeornelis.com"/>
+				<Button variant="ghost" onclick={() => mobileMenu.close()}>
+					<X />
+				</Button>
+			</div>
+
+			<nav aria-hidden="false" class="flex flex-col gap-2.5">
+				{#each items as { url, label, available }, i}
+					{#if available}
+						<a
+							href={url}
+							onclick={() => mobileMenu.close()}
+							class={cn("px-3 py-2 rounded text-foreground", page.url.pathname.startsWith(url) && "border border-primary! text-accent bg-primary/10")}
+						>
+							{label}
+						</a>
+					{/if}
+				{/each}
+			</nav>
+		</div>		
+	</NavigatorMobileRoot>
+
 	<NavigatorOverlay>
 		<p>Lorem ipsum dolor sit amet</p>
 	</NavigatorOverlay>
@@ -74,8 +106,6 @@
 	</main>
 
 	<Footer />
-
 	<WindowPlayer />
-
 	<Elevator />
 </GlobalWrapper>

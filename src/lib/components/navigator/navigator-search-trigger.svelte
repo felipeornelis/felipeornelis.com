@@ -8,6 +8,6 @@
     let { children }: Props = $props();
 </script>
 
-<div class="contents">
+<div class="hidden md:contents">
     {@render children()}
 </div>

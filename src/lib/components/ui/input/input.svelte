@@ -11,7 +11,7 @@
         ...props
     }: Props = $props();
 
-    const input = cva('border px-2 py-1 rounded transition-all duration-300 focus-visible:outline-0 focus-visible:ring-2 focus-visible:ring-accent', {
+    const input = cva('text-sm border px-2 py-2 rounded transition-all duration-300 focus-visible:outline-0 focus-visible:ring-2 focus-visible:ring-accent md:text-base', {
         variants: {
             type: {
                 number: 'appearence-none'

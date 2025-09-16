@@ -3,6 +3,8 @@
 	import { searchContainer } from "$lib/runes/search.svelte";
 	import NavigatorButton from "./navigator-button.svelte";
 	import { ChartNoAxesGantt } from "@lucide/svelte";
+	import { bodyScroll } from "$lib/runes/body.svelte";
+	import { mobileMenu } from "$lib/runes/mobile-menu.svelte";
 
     interface Props {
         children: Snippet;
@@ -24,7 +26,7 @@
         </div>
 
         <div class="contents md:hidden">
-            <NavigatorButton action={() => {}}>
+            <NavigatorButton action={() => mobileMenu.open()}>
                 <ChartNoAxesGantt />
             </NavigatorButton>
         </div>

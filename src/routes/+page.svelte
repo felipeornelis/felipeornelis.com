@@ -1,6 +1,9 @@
 <script lang="ts">
 	import { Head } from "$lib/components/head";
 	import Link from "$lib/components/link/link.svelte";
+    import { Drawer } from "vaul-svelte";
+
+
 
     let metadata = {
         title: 'Oieexeeee',
@@ -16,3 +19,4 @@
 <div class="flex w-full justify-center gap-2">
     
 </div>
+
