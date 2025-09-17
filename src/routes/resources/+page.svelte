@@ -17,7 +17,7 @@
     <header class="flex gap-3 mb-4">
         <hgroup class="flex flex-col gap-3">
             <h1 class="text-2xl font-semibold lg:text-3xl">
-                Regra de 3
+                Recursos e ferramentas
             </h1>
 
             <p class="text-muted-foreground">
