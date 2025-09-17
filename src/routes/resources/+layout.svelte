@@ -29,6 +29,8 @@
             url: '/resources/math/rule-of-three'
         }
     ]
+
+    let isDrawerOpen = $state(false);
 </script>
 
 
@@ -64,19 +66,18 @@
 </div>
 
 
-
-<Drawer.Root shouldScaleBackground>
-    <Drawer.Trigger>
+<Drawer.Root bind:open={isDrawerOpen}>
+    <Drawer.Trigger class="p-3 bg-background/60 text-foreground border rounded [&>svg]:stroke-muted-foreground [&>svg]:stroke-1 [&>svg]:size-6 cursor-pointer hover:border-primary! transition-all duration-300 [&>svg]:border-0 backdrop-blur-md fixed bottom-7 md:bottom-12 left-7 z-50 block" aria-label="Abrir menu de recursos">
         <!-- {#snippet child({ props })} -->
-            <div class="fixed bottom-7 md:bottom-12 left-7 z-50 block">
+            <!-- <div class="fixed bottom-7 md:bottom-12 left-7 z-50 block">
                 <button
                     type="button"
                     class={cn("p-3 bg-background/60 text-foreground border rounded [&>svg]:stroke-muted-foreground [&>svg]:stroke-1 [&>svg]:size-6 cursor-pointer hover:border-primary! z-[51] transition-all duration-300 [&>svg]:border-0 backdrop-blur-md")}
                     aria-label="Abrir menu de recursos"
-                >
+                > -->
                     <Menu />
-                </button>
-            </div>
+                <!-- </button>
+            </div> -->
         <!-- {/snippet} -->
     </Drawer.Trigger>
 		<Drawer.Portal>
@@ -95,6 +96,7 @@
                                             href={url}
                                             draggable="false"
                                             class={cn("px-3 py-2 rounded text-foreground", page.url.pathname == url && "border border-primary! text-accent bg-primary/10")}
+                                            onclick={() => isDrawerOpen = false}
                                         >
                                             {label}
                                         </a>

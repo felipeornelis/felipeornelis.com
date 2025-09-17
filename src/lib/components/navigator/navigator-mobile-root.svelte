@@ -24,8 +24,6 @@
     })
 </script>
 
-<svelte:body />
-
 <div class={cn("md:hidden z-[100] inset-0 h-screen", mobileMenu.isOpen ? "fixed" : "hidden")}>
     <div class="size-full bg-background relative supports-[backdrop-filter]:bg-background/30 backdrop-blur-2xl transition-all duration-200 p-5 overflow-x-hidden overflow-y-auto">
         {@render children()}
